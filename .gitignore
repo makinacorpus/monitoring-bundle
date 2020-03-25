@@ -1,0 +1,5 @@
+/composer.lock
+/coverage
+infection.log
+/phpunit.xml
+/vendor

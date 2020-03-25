@@ -1,0 +1,7 @@
+monitoring_status:
+    path: /monitoring/status
+    controller: MakinaCorpus\Monitoring\Bridge\Symfony\Controller\MonitoringController::statusAll
+
+monitoring_status_unit:
+    resource: MakinaCorpus\Monitoring\Bridge\Symfony\Routing\ProbeRouteLoader::load
+    type: service

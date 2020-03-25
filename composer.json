@@ -1,0 +1,35 @@
+{
+    "name" : "makinacorpus/monitoring-bundle",
+    "description": "Simple monitoring tooling and Symfony bundle",
+    "minimum-stability" : "dev",
+    "prefer-stable" : true,
+    "autoload" : {
+        "psr-4" : {
+            "MakinaCorpus\\Monitoring\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MakinaCorpus\\Monitoring\\Tests\\": "tests/"
+        }
+    },
+    "require" : {
+        "php" : ">=7.2"
+    },
+    "require-dev" : {
+        "infection/infection": "^0.15.0",
+        "phpunit/phpunit" : "7.*",
+        "symfony/config": "^4.2 || 5.0",
+        "symfony/console": "^4.2 || 5.0",
+        "symfony/dependency-injection": "^4.2 || 5.0",
+        "symfony/event-dispatcher": "^4.2 || 5.0",
+        "symfony/framework-bundle": "^4.2 || ^5.0",
+        "symfony/http-kernel": "^4.2 || 5.0",
+        "symfony/yaml": "^4.2 || 5.0",
+        "vimeo/psalm": "^3.8"
+    },
+    "suggest": {
+        "psr/log": "For using the check command",
+        "symfony/event-dispatcher": "For using the check command"
+    }
+}

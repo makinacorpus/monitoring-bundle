@@ -1,0 +1,9 @@
+monitoring:
+    # Tags can be named, if you need to build a human friendly UI.
+    # If tags are defined here, but not exposed by info collectors
+    # implementations, they will be dropped from list.
+    # @see \MakinaCorpus\Monitoring\ProbeRegistry::getInfoCollectorTags()
+    info_collector_tags:
+        database: Database
+        filesystem: File system
+        # ...

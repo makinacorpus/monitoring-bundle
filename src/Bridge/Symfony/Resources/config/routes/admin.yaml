@@ -1,0 +1,3 @@
+monitoring_report:
+    path: /monitoring/report/{tag}
+    controller: MakinaCorpus\Monitoring\Bridge\Symfony\Controller\MonitoringController::report

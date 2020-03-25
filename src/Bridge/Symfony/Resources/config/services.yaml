@@ -1,0 +1,23 @@
+parameters:
+    env(MONITORING_TOKEN): ~
+    monitoring.secret: "%env(string:MONITORING_TOKEN)%"
+    monitoring.template.report: "@@Monitoring/report.html.twig"
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: false
+        public: false
+    monitoring.registry:
+        class: MakinaCorpus\Monitoring\DefaultProbeRegistry
+        arguments: [[], []]
+    MakinaCorpus\Monitoring\ProbeRegistry:
+        alias: monitoring.registry
+    MakinaCorpus\Monitoring\Bridge\Symfony\Controller\MonitoringController:
+        arguments:
+            - "%monitoring.template.report%"
+            - "%monitoring.secret%"
+            - "%kernel.debug%"
+        tags: ["controller.service_arguments"]
+    MakinaCorpus\Monitoring\Bridge\Symfony\Routing\ProbeRouteLoader:
+        public: true # Else route loading will fail in fetching the service.
+        arguments: ["@monitoring.registry"]

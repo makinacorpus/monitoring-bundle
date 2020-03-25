@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: false
+        public: false
+    MakinaCorpus\Monitoring\Bridge\Symfony\Command\GenerateTokenCommand:
+        arguments: ["@monitoring.registry", "@router", "%monitoring.secret%"]
+        tags: ["console.command"]
+    MakinaCorpus\Monitoring\Command\CheckCommand:
+        arguments: ["@monitoring.registry", "@event_dispatcher", "@logger"]
+        tags: ["console.command"]
+    MakinaCorpus\Monitoring\Command\ProbeCommand:
+        arguments: ["@monitoring.registry"]
+        tags: ["console.command"]
+    MakinaCorpus\Monitoring\Command\ReportCommand:
+        arguments: ["@monitoring.registry"]
+        tags: ["console.command"]
