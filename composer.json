@@ -1,6 +1,9 @@
 {
     "name" : "makinacorpus/monitoring-bundle",
     "description": "Simple monitoring tooling and Symfony bundle",
+    "keywords" : ["monitoring", "nagios", "centreon", "supervision", "symfony"],
+    "homepage": "http://github.com/makinacorpus/monitoring-bundle",
+    "license": "GPL-2.0-or-later",
     "minimum-stability" : "dev",
     "prefer-stable" : true,
     "autoload" : {
