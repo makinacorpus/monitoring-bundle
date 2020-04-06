@@ -21,3 +21,4 @@ services:
     MakinaCorpus\Monitoring\Bridge\Symfony\Routing\ProbeRouteLoader:
         public: true # Else route loading will fail in fetching the service.
         arguments: ["@monitoring.registry"]
+        tags: ['routing.route_loader']
