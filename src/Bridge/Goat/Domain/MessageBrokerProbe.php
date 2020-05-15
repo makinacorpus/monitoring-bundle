@@ -25,8 +25,8 @@ final class MessageBrokerProbe implements Probe
     public function __construct(Runner $runner, ?int $warningThreshold = null, ?int $criticalThreshold = null)
     {
         $this->runner = $runner;
-        $this->warningThreshold = $warningThreshold ?? 1000;
-        $this->criticalThreshold = $criticalThreshold ?? 500;
+        $this->warningThreshold = $warningThreshold ?? 500;
+        $this->criticalThreshold = $criticalThreshold ?? 1000;
     }
 
     /**
