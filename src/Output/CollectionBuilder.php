@@ -67,7 +67,7 @@ final class CollectionBuilder
                 $this->items = $items;
             }
 
-            public function getIterator()
+            public function getIterator(): \Traversable
             {
                 foreach ($this->items as $item) {
                     yield $item;
