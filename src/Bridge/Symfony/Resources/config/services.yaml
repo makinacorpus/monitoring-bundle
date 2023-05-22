@@ -13,7 +13,6 @@ services:
     MakinaCorpus\Monitoring\ProbeRegistry:
         alias: monitoring.registry
     MakinaCorpus\Monitoring\Bridge\Symfony\Controller\MonitoringController:
-        autowire: true
         arguments:
             - "%monitoring.template.report%"
             - "%monitoring.secret%"
